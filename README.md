@@ -1,2 +1,2 @@
-# mis_retos
-Practicando la programación
+## poniendo en practica programación
+
