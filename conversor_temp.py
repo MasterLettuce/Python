@@ -1,6 +1,9 @@
 #conversor de temperaturas
+CaK=lambda:x+273.15
+CaF=lambda:x*(9/5)+32
+CaR=lambda:x*(9/5)+491.67
 
-def CaF(x):
+'''def CaF(x):
     # de celcius a farenheit
     FH=x*(9/5)+32
     return FH
@@ -14,6 +17,8 @@ def CaR(x):
     # de celcius a Rankine
     Rkn=x*(9/5)+491.67
     return Rkn
+    '''
+
 print(" Escalas de temperatura Celcius(c),Farenheit(f), Kelvin(k), Rankine(r)")
 print("Indica la escala que tienes:")
 inicial=input()
