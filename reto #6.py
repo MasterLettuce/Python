@@ -10,14 +10,79 @@
  ...
 
  import random as rd 
+
 formas=('piedra', 'papel', 'tijera', 'lagarto', 'spock')
+
 def juego():
-    n_Jugadas=5
-    for i in range(1,n_Jugadas+1):
-        player1=rd.choice(formas)
-        player2=rd.choice(formas)
-        partidas=(player1,player2)
-        return partidas
-        i+=1
-        
-print(juego())      
+    player1=rd.choice(formas)
+    player2=rd.choice(formas)
+    partidas=(player1,player2)
+    return partidas
+    i+=1
+
+def comparacion():
+    j1,j2=(juego())
+
+    #opciones de piedra
+    if j1=="piedra" and j2=="tijera":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="piedra" and j2== "lagarto":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="tijera" and j2=="piedra":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="lagarto" and j2=="piedra":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="piedra" and j2=="piedra":
+        return(j1,j2,"empate")    
+    #opciones de papel
+    elif j1=="papel" and j2=="piedra":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="papel" and j2=="spock":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="piedra" and j2=="papel":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="spock" and j2=="papel":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="papel" and j2=="papel":
+        return(j1,j2,"empate")
+    #opciones de tijera
+    elif j1=="tijera" and j2=="papel":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="tijera" and j2=="lagarto":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="papel" and j2=="tijera":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="lagarto" and j2=="tijera":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="tijera" and j2=="tijera":
+        return(j1,j2,"empate")
+    #opciones de lagarto
+    elif j1=="lagarto" and j2=="papel":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="lagarto" and j2=="spock":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="spock" and j2=="lagarto":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="papel" and j2=="lagarto":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="lagarto" and j2=="lagarto":
+        return(j1,j2,"empate")
+    #opciones de spock
+    elif j1=="spock" and j2=="tijera":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="spock" and j2=="piedra":
+        return(j1,j2,"jugador 1 gana")
+    elif j1=="tijera" and j2=="spock":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="piedra" and j2=="spock":
+        return(j1,j2,"jugador 2 gana")
+    elif j1=="spock" and j2=="spock":
+        return(j1,j2,"empate")    
+
+
+n_Jugadas=5
+for i in range(1,n_Jugadas+1):
+    i1,i2,i3=(comparacion())
+    
+    print(comparacion())
+i+=1
